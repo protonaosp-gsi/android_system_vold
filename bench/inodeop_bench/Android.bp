@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Android Open Source Project
+ * Copyright (C) 2020 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,19 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
 
-#ifndef ANDROID_VOLD_CHECK_ENCRYPTION_H
-#define ANDROID_VOLD_CHECK_ENCRYPTION_H
-
-#include <string>
-
-namespace android {
-namespace vold {
-
-/* Check encryption of private volume mounted at the given path */
-int CheckEncryption(const std::string& path);
-
-}  // namespace vold
-}  // namespace android
-
-#endif
+cc_binary {
+    name: "inodeop_bench",
+    srcs: ["inodeop_bench.cpp"],
+}
